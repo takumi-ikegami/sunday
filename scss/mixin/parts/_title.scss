@@ -1,0 +1,10 @@
+@use "../../config/config" as cf;
+@use "font" as font;
+
+@mixin section-title ($text-wid) {
+    width: $text-wid;
+    border-left: 1px solid cf.$cFont;
+    color: cf.$cFont;
+    @include font.large-font;
+    padding-left: 20px;
+}

@@ -1,0 +1,7 @@
+@use "../../config/config" as cf;
+
+@mixin mq($bp) {
+    @media #{map-get(cf.$breakpoint, $bp)}{
+        @content;
+    }
+}

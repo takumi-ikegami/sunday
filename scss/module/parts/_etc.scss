@@ -1,0 +1,78 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+/* スクロール */
+.scroll-down {
+    height: 80px;
+    width: 100%;
+    position: relative;
+
+    @include mix.mq(pc) {
+        height: 120px;
+    }
+
+    &__stick{
+        position: absolute;
+        right: 50%;
+        bottom: 20px;
+
+        @include mix.mq(pc) {
+            bottom: 45px;
+        }
+
+        @include mix.anim(
+            $name: arrows,
+            $timing-function: ease-in-out,
+            $iteration-count: infinite,
+        );
+
+        &:before {
+            position: absolute;
+            bottom: 2px;
+            right: -4px;
+            content: "";
+            width: 1px;
+            height: 10px;
+            background: cf.$cMain-color;
+            transform: rotate(45deg);
+            
+            @include mix.mq(pc) {
+                height: 20px;
+                bottom: -4px;
+                right: -7px;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 3px;
+            right: 0;
+            width: 1px;
+            height: 40px;
+            background: cf.$cMain-color;
+            
+            @include mix.mq(pc) {
+                bottom: 0;
+                height: 50px;
+            }
+        }
+    
+        @keyframes arrows {
+            50% {
+                transform: translateY(10px);
+            }
+            
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__contents {
+        color: cf.$cMain-color;
+        letter-spacing: 0.05em;
+        writing-mode: vertical-rl;
+        @include mix.min-font;
+    }
+}

@@ -1,0 +1,133 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.footer {
+    background-color: cf.$cMain-color;
+
+    &__main {
+        @include mix.wrap;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        display: block;
+        width: 130px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        margin-left: 15px;
+        
+
+        &:first-child{
+            &::before {
+                content: url(../image/iconb.svg);
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+            }
+        }
+
+        &:last-child{
+            &::before {
+                content: url(../image/icona.svg);
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+            }
+        }
+
+    }
+
+    &__text {
+        padding-top: 30px;
+    }
+
+    &__text-item {
+        padding-top: 20px;
+        @include mix.base-font;
+        color: cf.$cWhite;
+
+        &:last-child {
+            display: inline-block;
+            @include mix.middle-font;
+
+            &::before {
+                content: url(../image/sp.svg);
+                vertical-align: middle;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &__policy {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__policy-item {
+        border-left: 1px solid cf.$cWhite;
+        padding: 0 10px;
+
+        &:first-child {
+            border: none;
+        }
+    }
+
+    &__policy-link {
+        @include mix.min-font;
+        color: cf.$cWhite;
+    }
+
+    &__copy {
+        @include mix.min-font;
+        padding-top: 20px;
+        text-align: center;
+        color: cf.$cWhite;
+    }
+}
+
+@include mix.mq(pc) {
+    .footer {
+        &__main {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        &__link {
+            width: 200px;
+        }
+
+        &__text-item {
+            &:last-child {
+                @include mix.large-font;
+
+                &::before {
+                    vertical-align: top;
+                }
+            }
+        }
+
+        &__policy {
+            padding-top: 30px;
+        }
+
+        &__copy {
+            padding-top: 30px;
+        }
+    }
+}

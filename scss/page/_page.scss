@@ -1,0 +1,23 @@
+/* top */
+@forward "top/key";
+@forward "top/top-about.scss";
+@forward "top/top-service.scss";
+@forward "top/top-goods.scss";
+@forward "top/top-access.scss";
+
+/* about us */
+@forward "about_us/about_img.scss";
+@forward "about_us/about-copy.scss";
+@forward "about_us/about_main.scss";
+
+/* service */
+@forward "service/service_img.scss";
+@forward "service/service_wedding.scss";
+@forward "service/service_cerem.scss";
+@forward "service/service_gift.scss";
+@forward "service/service_item.scss";
+
+/* contact */
+@forward "contact/contact-img.scss";
+@forward "contact/contact-phone.scss";
+@forward "contact/contact-form.scss";

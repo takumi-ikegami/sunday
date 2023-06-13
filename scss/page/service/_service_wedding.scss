@@ -1,0 +1,10 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.service-wedding {
+    @include mix.service-section;
+
+    &__img {
+        background-image: url(../image/weding.jpg);
+    }
+}

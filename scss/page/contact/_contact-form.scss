@@ -1,0 +1,90 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.contact-form {
+    @include mix.wrap;
+    border: 1px solid cf.$cFont;
+    border-radius: 10px;
+    margin-bottom: 80px;
+
+    &__title {
+        @include mix.base-font;
+        color: cf.$cFont;
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    &__main {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    &__contents {
+        margin-bottom: 40px;
+    }
+
+    &__sub-title {
+        @include mix.base-font;
+        color: cf.$cFont;
+        padding: 8px 0;
+        padding-left: 5px;
+        display: block;
+        border-left: 5px solid cf.$cFont;
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        @include mix.base-font;
+        color: cf.$cFont;
+        display: block;
+        padding: 10px 0;
+    }
+
+    &__folder {
+        @include mix.base-font;
+        color: cf.$cFont;
+        display: block;
+        border: 1px solid cf.$cFont;
+        width: 100%;
+        padding: 10px;
+        background-color: #e0e0e0;
+    }
+
+    &__textarea {
+        @include mix.base-font;
+        color: cf.$cFont;
+        display: block;
+        border: 1px solid cf.$cFont;
+        width: 100%;
+        padding: 10px;
+        background-color: #e0e0e0;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        color: cf.$cFont;
+        background-color: #e0e0e0;
+        padding: 5px 20px;
+        border: 1px solid cf.$cFont;
+        @include mix.base-font;
+    }
+}
+
+@include mix.mq(pc) {
+    .contact-form {
+        margin-bottom: 160px;
+
+        &__title {
+            padding: 80px 0;
+        }
+
+        &__contents {
+            margin-bottom: 60px;
+        }
+
+        &__sub-title {  
+            margin-bottom: 10px;
+        }
+    }
+}

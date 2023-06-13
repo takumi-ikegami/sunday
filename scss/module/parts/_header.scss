@@ -1,0 +1,88 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+/* ヘッダー */
+.heading {
+    position: fixed;
+    background-color: cf.$cWhite;
+    z-index: 1000;
+    width: 100%;
+    
+    &__contents {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 90%;
+    
+        @include mix.mq(pc){
+            height: 120px;
+        }
+    
+    }
+    &__link {
+        display: block;
+        width: 130px;
+        height: auto;
+    }
+    
+    & .icon {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    
+        &__cart {
+            display: block;
+            width: 45px;
+            height: auto;
+        }
+    
+        &__btn {
+            margin-left: 20px;
+            z-index: 1100;
+            @include mix.mq(pc) {
+                display: none;
+            }
+    
+            &--open {
+                & .icon__item{
+                    transition: 0.7s;
+                    background-color: cf.$cWhite;
+    
+                    &:nth-child(1){
+                        transform: translateY(14px) rotate(135deg);
+                    }
+                    &:nth-child(2){
+                        transform: scaleX(0) translateX(-20px);
+                    }
+                    &:nth-child(3){
+                        transform: translateY(-14px) rotate(-135deg);
+                    }
+                }
+            }
+        }
+    
+        &__item {
+            background-color: cf.$cMain-color;
+            width: 40px;
+            height: 2px;
+            display: block;
+            margin-bottom: 12px;
+            line-height: 0;
+            transition: transform 0.7s;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    @include mix.mq(pc) {
+        & .menu {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+    }
+}

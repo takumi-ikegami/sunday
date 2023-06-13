@@ -1,0 +1,79 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.about-copy {
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    &__title {
+        text-align: center;
+        @include mix.middle-font;
+        color: cf.$cFont;
+        padding-bottom: 20px;
+        opacity: 0;
+
+        &--active {
+            @include mix.anim(
+                $name: about-copy-anim,
+                $delay: 0.2s,
+            )
+        }
+    }
+
+    &__text {
+        text-align: center;
+        @include mix.base-font;
+        color: cf.$cFont;
+        padding-top: 20px;
+        opacity: 0;
+
+        &--active {
+            &:nth-of-type(1){
+                @include mix.anim(
+                $name: about-copy-anim,
+                $delay: 0.4s,
+                )
+            }
+
+            &:nth-of-type(2){
+                @include mix.anim(
+                $name: about-copy-anim,
+                $delay: 0.6s,
+                )
+            }
+
+            &:nth-of-type(3){
+                @include mix.anim(
+                $name: about-copy-anim,
+                $delay: 0.8s,
+                )
+            }
+        }
+    }
+
+    @keyframes about-copy-anim {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@include mix.mq(pc) {
+    .about-copy {
+        padding-top: 40px;
+        padding-bottom: 80px;
+
+        &__title {
+            padding-bottom: 30px;
+        }
+
+        &__text {
+            padding-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use "../../config/config" as var;
+
+/* フォント指定 */
+@mixin base-font {
+    font-family: var.$base_font;
+    font-size: var.$base_size;
+}
+
+@mixin large-font {
+    font-family: var.$base_font;
+    font-size: var.$large_size;
+}
+
+@mixin middle-font {
+    font-family: var.$base_font;
+    font-size: var.$middle_size;
+}
+
+@mixin min-font {
+    font-family: var.$base_font;
+    font-size: var.$min_size;
+}

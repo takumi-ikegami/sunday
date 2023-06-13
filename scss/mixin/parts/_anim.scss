@@ -1,0 +1,20 @@
+/* アニメーション */
+@mixin anim(
+    $name,
+    $fill-mode: forwards,
+    $duration: 1s,
+    $iteration-count: 1,
+    $timing-function: ease,
+    $delay: 0s,
+    $direction: normal,
+) {
+    animation: {
+        name: $name;
+        fill-mode: $fill-mode;
+        duration: $duration;
+        iteration-count: $iteration-count;
+        timing-function: $timing-function;
+        delay: $delay;
+        direction: $direction;
+    }
+}

@@ -1,0 +1,43 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.contact-phone {
+    @include mix.wrap;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin: 20px auto 80px;
+    border: 1px solid cf.$cFont;
+    border-radius: 10px;
+
+    &__text {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        color: cf.$cFont;
+        @include mix.base-font;
+
+        &:nth-child(2) {
+            @include mix.large-font;
+            display: inline-block;
+
+            &::before {
+                content: url(../image/sp-base.svg);
+                vertical-align: middle;
+                padding-right: 10px;
+                color: cf.$cFont;
+            }
+        }
+    }
+}
+
+@include mix.mq(pc) {
+    .contact-phone {
+        padding-top: 30px;
+        padding-bottom: 60px;
+        margin: 40px auto 160px;
+
+        &__text {
+            padding-top: 30px;
+        }
+    }
+}

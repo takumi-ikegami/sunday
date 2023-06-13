@@ -1,0 +1,42 @@
+@use "font" as ft;
+@use "../../config/config" as cf;
+
+@mixin btn {
+    &__btn{
+        @include ft.base-font;
+        color: cf.$cFont;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 240px;
+        height: 57px;
+        border: 1px solid cf.$cFont;
+        line-height: 55px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            color: cf.$cWhite;
+        }
+        
+    }
+
+    .btn {
+        &:hover > .btn__slide {
+            transform: none;
+        }
+        
+        &__slide {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: cf.$cFont;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+            z-index: -1;
+        }       
+    }
+}

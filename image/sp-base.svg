@@ -1,0 +1,12 @@
+<svg id="グループ_33" data-name="グループ 33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.312" height="40.367" viewBox="0 0 21.312 40.367">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_38" data-name="長方形 38" width="21.312" height="40.367" fill="none" stroke="#a1a1a1" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_32" data-name="グループ 32" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="長方形_36" data-name="長方形 36" d="M.949,0H19.108a.95.95,0,0,1,.95.95V38.164a.949.949,0,0,1-.949.949H.949A.949.949,0,0,1,0,38.164V.949A.949.949,0,0,1,.949,0Z" transform="translate(0.626 0.627)" fill="none" stroke="#a1a1a1" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="長方形_37" data-name="長方形 37" d="M1.121,0H13.146a1.12,1.12,0,0,1,1.12,1.12V25.089a1.12,1.12,0,0,1-1.12,1.12H1.12A1.12,1.12,0,0,1,0,25.089V1.121A1.121,1.121,0,0,1,1.121,0Z" transform="translate(3.285 4.955)" fill="none" stroke="#a1a1a1" stroke-miterlimit="10" stroke-width="0.827"/>
+    <circle id="楕円形_11" data-name="楕円形 11" cx="1.605" cy="1.605" r="1.605" transform="translate(9.151 34.575)" fill="none" stroke="#a1a1a1" stroke-miterlimit="10" stroke-width="0.5"/>
+  </g>
+</svg>

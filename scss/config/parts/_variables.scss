@@ -1,0 +1,25 @@
+/* color */
+$cWhite: #fff;
+$cHover: #2e2828;
+$cFont: #555555;
+
+/* main-color */
+$cMain-color: #9BA1A2;
+$cSub-color: #556366;
+
+/* fonts */
+$base_font: 'Roboto','Hiragino Sans','Meiryo','Hiragino Kaku Gothic ProN',sans-serif;
+
+/* fontsize */
+$min_size: 10px;
+$base_size: 16px;
+$middle_size: 18px;
+$large_size: 24px;
+
+/* メディアクエリ */
+$breakpoint:(
+    sp: 'screen and (max-width: 768px)',
+    pc: 'screen and (min-width: 769px)',
+    // tb: 'screen and (min-width: 769px) and (max-width: 1199px)',
+    wp: 'screen and (min-width: 1200px)',
+);

@@ -1,0 +1,31 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+/* キービジュアル */
+.key-visual {
+    width: 100%;
+    padding-top: 80px;
+
+    @include mix.mq(pc) {
+        padding-top: 120px;
+    }
+
+    &__item {
+        height: 240px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include mix.mq(pc) {
+            height: 720px;
+        }
+
+        &:first-child {
+            background-image: url(../image/main_visual.jpg);
+        }
+        
+        &:last-child {
+            background-image: url(../image/about_visual.jpg);
+        }
+    }
+}

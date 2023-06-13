@@ -1,0 +1,49 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.about-img {
+    width: 100%;
+    padding-top: 80px;
+
+    
+    &__img {
+        height: 240px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(../image/about_visual.jpg);
+        display: flex;
+        align-items: center;
+    }
+    
+    &__back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 50%;
+        background-color: cf.$cMain-color;
+        margin: 0 auto;
+        opacity: 0.8;
+    }
+    
+    &__text {
+        color: cf.$cWhite;
+        @include mix.middle-font;
+    }
+}
+
+@include mix.mq(pc) {
+    .about-img {
+        padding-top: 120px;
+
+        &__img {
+            height: 720px;
+        }
+
+        &__back {
+            width: 359px;
+            height: 174px;
+        }
+    }
+}

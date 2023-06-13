@@ -1,0 +1,52 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.top-about {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    @include mix.wrap;
+    
+    &__title {
+        @include mix.section-title(200px);
+    }
+    
+    &__text {
+        color: cf.$cFont;
+        @include mix.base-font;
+        padding-top: 20px;
+        
+        &:nth-of-type(1) {
+            padding-top: 40px;
+        }
+    }
+
+    @include mix.btn;
+
+    &__btn {
+        margin-top: 50px;
+    }
+}
+
+@include mix.mq(pc) {
+    .top-about {
+        padding-top: 20px;
+        padding-bottom: 80px;
+        
+        &__title {
+            margin: 0 auto;
+        }
+        
+        &__text {
+            text-align: center;
+            padding-top: 40px;
+
+            &:nth-of-type(1) {
+                padding-top: 80px;
+            }
+        }
+
+        &__btn {
+            margin-top: 80px;
+        }
+    }
+}

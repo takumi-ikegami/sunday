@@ -1,0 +1,44 @@
+@use "../../config/config" as cf;
+@use "font" as font;
+@use "mq" as mq;
+
+@mixin title-back {
+    width: 100%;
+    padding-top: 80px;
+    
+        
+    &__img {
+        height: 200px;
+        display: flex;
+        align-items: center;
+    }
+        
+    &__back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 50%;
+        background-color: cf.$cMain-color;
+        margin: 0 auto;
+        opacity: 0.8;
+    }
+        
+    &__text {
+        color: cf.$cWhite;
+        @include font.middle-font;
+    }
+    
+    @include mq.mq(pc) {
+        padding-top: 120px;
+    
+        &__img {
+            height: 400px;
+        }
+    
+        &__back {
+            width: 359px;
+            height: 174px;
+        }
+    }
+}

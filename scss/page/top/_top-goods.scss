@@ -1,0 +1,37 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.top-goods {
+    @include mix.wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    /* タイトル配置 */
+    &__title {
+        @include mix.section-title(170px);
+    }
+    
+    /* 商品配置 */
+    @include mix.items;
+    
+    /* ボタン配置 */
+    @include mix.btn;
+
+    &__btn {
+        margin-top: 80px;
+        @include mix.base-font;
+        color: cf.$cFont;
+    }
+}
+
+@include mix.mq(pc) {
+    .top-goods {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        /* タイトル配置 */
+        &__title {
+            margin: 0 auto;
+        }
+    }
+}

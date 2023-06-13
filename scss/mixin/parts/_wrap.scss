@@ -1,0 +1,11 @@
+@use "../../base/base" as bs;
+@use "mq" as mq;
+
+@mixin wrap {
+    width: bs.$sp-base-wrap;
+    margin: 0 auto;
+
+    @include mq.mq(wp){
+        width: bs.$pc-base-wrap;
+    }
+}

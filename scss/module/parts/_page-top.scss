@@ -1,0 +1,45 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.page-top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: cf.$cSub-color;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: -1;
+
+    &__link {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        &::before {
+            content: url(../image/page_top_btn.svg);
+            display: block;
+            width: 30px;
+            margin: 0 auto;
+            padding-top: 15px;
+        }
+    }
+
+}
+
+@include mix.mq(pc) {
+    .page-top {
+        width: 70px;
+        height: 70px;
+        right: 30px;
+        bottom: 30px;
+
+        &__link {
+            &::before {
+                width: 50px;
+            }
+        }
+    }
+}

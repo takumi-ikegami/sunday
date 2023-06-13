@@ -1,0 +1,89 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.service-item {
+    @include mix.wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    /* タイトル配置 */
+    &__title {
+        @include mix.section-title(170px);
+    }
+    
+    /* 商品配置 */
+    @include mix.items;
+
+    &__image {
+
+        &--1 {
+            background-image: url(../image/goods4.jpg);
+        }
+        &--2 {
+            background-image: url(../image/goods5.jpg);
+        }
+        &--3 {
+            background-image: url(../image/goods6.jpg);
+        }
+        &--4 {
+            background-image: url(../image/goods3.jpg);
+        }
+
+    }
+    
+    &__item {
+        display: block;
+        margin-top: 40px;
+
+        &:hover {
+            .service-item__hover{
+                background-color: cf.$cWhite;
+                width: 100%;
+                height: 100%;
+                display: block;
+                opacity: 0.2;
+            }
+
+            .service-item__text {
+                opacity: 0.9;
+            }
+
+            .service-item__image {
+                @include mix.anim (
+                    $name: zoom,
+                )
+            }
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+    }
+    
+    /* ボタン配置 */
+    @include mix.btn;
+
+    &__btn {
+        margin-top: 80px;
+        @include mix.base-font;
+        color: cf.$cFont;
+    }
+}
+
+@include mix.mq(pc) {
+    .service-item {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        /* タイトル配置 */
+        &__title {
+            margin: 0 auto;
+        }
+    }
+}

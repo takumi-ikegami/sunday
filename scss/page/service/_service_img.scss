@@ -1,0 +1,6 @@
+@use "../../mixin/mixin" as mix;
+@use "../../config/config" as cf;
+
+.service-img {
+    @include mix.title-back;
+}
